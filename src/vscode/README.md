@@ -10,13 +10,6 @@ Edit following volume bind path.
 ## Dependency
 [chrome image configuration](../chrome/README.md) needed.
 
-## Remote Container
-If you develop with remote containers, add the following conf to `devcontainer.json`
-```json:devcontainer.json
-  "workspaceMount": "source=${localEnv:BIND_PATH}/${localWorkspaceFolderBasename},target=/workspace,type=bind,consistency=cached",
-  "workspaceFolder": "/workspace"
-```
-
 ## App specific configuration
 ```yaml
   vscode:
@@ -37,4 +30,11 @@ If you develop with remote containers, add the following conf to `devcontainer.j
       - SYS_CHROOT
       - SYS_ADMIN
     command: ["usermod -aG root,docker user; su user -c \\\"code --verbose --enable-features=UseOzonePlatform --ozone-platform=wayland\\\""]
+```
+
+## Remote Container
+If you develop with remote containers, add the following conf to `devcontainer.json`
+```json:devcontainer.json
+  "workspaceMount": "source=${localEnv:BIND_PATH}/${localWorkspaceFolderBasename},target=/workspace,type=bind,consistency=cached",
+  "workspaceFolder": "/workspace"
 ```

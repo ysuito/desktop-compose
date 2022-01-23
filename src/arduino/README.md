@@ -17,6 +17,8 @@ Edit following volume bind path.
       - vscode
     shm_size: 2GB
     tmpfs: /dev/shm
+    environment:
+      - DONT_PROMPT_WSL_INSTALL=1
     volumes:
       - "ARDUINO_BIND_PATH:/home/user"
     cap_add:
