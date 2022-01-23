@@ -10,7 +10,8 @@ If you use rootless docker in the remote host, edit the following.
 In case of WSLg, uncomment `network_mode: host`.
 
 ## Local configuration
-```yml:local-compose.yml
+Add to `local-compose.yaml`.
+```yml:local-compose.yaml
   client:
     build: https://github.com/ysuito/desktop-compose.git#master:src/xpra
     image: xpra
@@ -91,7 +92,8 @@ In case of WSLg, uncomment `network_mode: host`.
 ```
 
 ## Remote configuration
-```yml:remote-compose.yml
+Add to `remote-compose.yaml`.
+```yml:remote-compose.yaml
   server:
     build: https://github.com/ysuito/desktop-compose.git#master:src/xpra
     image: xpra
