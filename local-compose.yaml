@@ -1,0 +1,8 @@
+version: "3.9"
+
+services:
+
+  ubuntubase:
+    build: https://github.com/ysuito/desktop-compose.git#master:src/ubuntubase_en
+    image: ubuntubase
+    container_name: ubuntubase
