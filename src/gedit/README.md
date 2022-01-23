@@ -1,14 +1,11 @@
-# meld image
-
-Edit following volume bind path.
-- MELD_BIND_PATH
+# gedit image
 
 ## App specific configuration
 ```yaml
   meld:
-    build: https://github.com/ysuito/desktop-compose.git#master:src/meld
-    image: meld
-    container_name: meld
+    build: https://github.com/ysuito/desktop-compose.git#master:src/gedit
+    image: gedit
+    container_name: gedit
     depends_on:
       - ubuntubase
     volumes:

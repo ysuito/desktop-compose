@@ -59,7 +59,7 @@ class _MyHomePageState extends State<MyHomePage> {
     container_name: gedit
     depends_on:
       - ubuntubase
-    command: ["su user -c \\\"gedit\\\""]
+    command: ["su user -c \\\\\\"gedit\\\\\\""]
   """;
   String resultSetting = "";
   String appUsage = "";
@@ -397,6 +397,14 @@ class _MyHomePageState extends State<MyHomePage> {
   }
 
   Map<String, dynamic> wslgConfig(String appName, Map<String, dynamic> config) {
+    List<dynamic> volumes = [];
+    volumes.add({
+      "type": "bind",
+      "source": "/tmp/.X11-unix/X0",
+      "target": "/tmp/.X11-unix/X101",
+    });
+    volumes += config["services"][appName]["volumes"];
+    config["services"][appName]["volumes"] = volumes;
     if (dockerType == "ROOTLESS") {
       config["services"][appName]["network_mode"] = "host";
     }
