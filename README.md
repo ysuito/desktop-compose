@@ -11,16 +11,16 @@ Download compose file.
 ```bash:local
 curl -o local-compose.yml https://raw.githubusercontent.com/ysuito/desktop-compose/master/local-compose.yml
 ```
-Create app config by [Desktop Compose Generator]().
+Create app config by [Desktop Compose Generator](https://ysuito.github.io/desktop-compose/).
 Add app config to compose file. 
-Refer [app config sample]().
+Refer [app config sample](/src/).
 
 ## Remote
 Remote resource will be available by adding `remote-compose.yaml` to remote host.
-Refer [detail]().
+Refer [detail](/src/xpra/README.md).
 
 ## Sync
-In [Desktop Compose Generator](), select Sync. Add to `local-compose.yml` or `remote-compose.yml`.
+In [Desktop Compose Generator](https://ysuito.github.io/desktop-compose/), select Sync. Add to `local-compose.yml` or `remote-compose.yml`.
 
 ## Limitation
 - Remote sound is not available.
